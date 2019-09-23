@@ -71,7 +71,7 @@ typedef parameters< wx_parameter > param;
 #include "rjmcmc-wx/gui/resources/IGN.xpm"
 //]
 
-#define NEEDS_XINITTHREADS (wxMAJOR_VERSION>=3 && !defined(__WINDOWS__) && !defined(__WXOS2__))
+#define NEEDS_XINITTHREADS 0// (wxMAJOR_VERSION>=3 && !defined(__WINDOWS__) && !defined(__WXOS2__))
 #if NEEDS_XINITTHREADS
 #include <X11/Xlib.h>
 #endif

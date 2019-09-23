@@ -57,6 +57,7 @@ add_definitions(${rjmcmc-wx_DEFINITIONS})
 include_directories(${rjmcmc_INCLUDE_DIRS})
 include_directories(${rjmcmc-wx_INCLUDE_DIRS})
 include_directories(../../include)
+include_directories(${Boost_INCLUDE_DIR})
 
 file( GLOB_RECURSE rjmcmc-wx_HPP    ../../include/rjmcmc-wx/*.h  ../../include/rjmcmc-wx/*.hpp    )
 aux_source_directory( . rjmcmc-wx_CPP )

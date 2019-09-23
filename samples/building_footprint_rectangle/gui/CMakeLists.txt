@@ -1,6 +1,7 @@
 include_directories(${rjmcmc_INCLUDE_DIRS})
 add_definitions(${rjmcmc_DEFINITIONS})
 include_directories(../core)
+include_directories(${TIFF_INCLUDE_DIR})
 
 if(WIN32)
   set(exe_FLAG "WIN32")
