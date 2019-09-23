@@ -20,7 +20,8 @@ typedef parameters< parameter > param;
 
 int main(int argc , char** argv)
 {
-  param *p = param::instance();
+  //param *p = param::instance();
+	param *p = new param;
   initialize_parameters(p);
   if (!p->parse(argc, argv)) return -1;
   
@@ -36,6 +37,8 @@ int main(int argc , char** argv)
   gradient_functor gf(p->get<double>("sigmaD"));
   oriented_gradient_view grad_view(dsm_file,  bbox, gf);
   oriented_ndvi_view     ndvi_view(ndvi_file, bbox);
+
+  set_bbox(p, bbox);
   
   configuration *conf;
   sampler       *samp;
